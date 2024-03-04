@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:tc:mysql:8.0.19//guide
+    username: 'user'
+    password: ''
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true

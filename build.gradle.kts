@@ -48,7 +48,12 @@ dependencies {
 	// kotlin-logging
 	implementation ("io.github.oshai:kotlin-logging-jvm:5.1.0")
 	runtimeOnly("com.mysql:mysql-connector-j")
+//	runtimeOnly("com.h2database:h2")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	// testcontainers
+	testImplementation ("org.springframework.boot:spring-boot-testcontainers")
+	testImplementation ("org.testcontainers:mysql:1.19.6")
+	testImplementation ("org.testcontainers:junit-jupiter")
 }
 
 tasks.withType<KotlinCompile> {
