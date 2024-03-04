@@ -22,7 +22,7 @@ internal class TeamRepositoryTest @Autowired constructor(
 ) {
 
     @Test
-    internal fun findById() {
+    fun findById() {
         val team = Team("Real Madrid C.F", "La Liga")
         entityManager.persist(team)
         entityManager.flush()
