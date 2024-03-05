@@ -1,0 +1,40 @@
+"404":
+  description: |
+    ### 404 Not Found
+    조회 대상이 없는 경우
+  content:
+    'application/json':
+      schema:
+        type: "object"
+        properties:
+          returnCode:
+            type: "integer"
+            description: "HttpStatus 상세 응답코드"
+            example: "404"
+          message:
+            type: "string"
+            description: "사용자에게 전달할 API 처리 결과 메시지 객체(en, ko, etc...)"
+            example: "선수를 찾을 수 없습니다"
+          data:
+            type: "object"
+            example:
+"500":
+  description: |
+    ### 500 Internal Error
+    서버 에러 발생
+  content:
+    'application/json':
+      schema:
+        type: "object"
+        properties:
+          returnCode:
+            type: "integer"
+            description: "HttpStatus 상세 응답코드"
+            example: "500"
+          message:
+            type: "string"
+            description: "사용자에게 전달할 API 처리 결과 메시지 객체(en, ko, etc...)"
+            example: "서버 에러"
+          data:
+            type: "object"
+            example:

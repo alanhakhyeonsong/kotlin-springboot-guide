@@ -1,0 +1,111 @@
+components:
+  schemas:
+    PlayerId:
+      type: "integer"
+      description: "선수 번호"
+      example: "1"
+    PlayerResponse:
+      type: "object"
+      properties:
+        name:
+          type: "string"
+          description: "선수 이름"
+          example: "Vini Jr"
+        backNumber:
+          type: "integer"
+          format: "int64"
+          description: "선수 등번호"
+          example: "7"
+        nationality:
+          type: "string"
+          description: "국적"
+          example: "Brazil"
+        teamName:
+          type: "string"
+          description: "소속팀"
+          example: "Real Madrid CF"
+        league:
+          type: "string"
+          description: "소속 리그"
+          example: "La Liga"
+    PlayerResponse2:
+      type: "object"
+      properties:
+        name:
+          type: "string"
+          description: "선수 이름"
+          example: "Jude Bellingham"
+        backNumber:
+          type: "integer"
+          format: "int64"
+          description: "선수 등번호"
+          example: "5"
+        nationality:
+          type: "string"
+          description: "국적"
+          example: "England"
+        teamName:
+          type: "string"
+          description: "소속팀"
+          example: "Real Madrid CF"
+        league:
+          type: "string"
+          description: "소속 리그"
+          example: "La Liga"
+    PlayerResponse3:
+      type: "object"
+      properties:
+        name:
+          type: "string"
+          description: "선수 이름"
+          example: "Erling Haland"
+        backNumber:
+          type: "integer"
+          format: "int64"
+          description: "선수 등번호"
+          example: "9"
+        nationality:
+          type: "string"
+          description: "국적"
+          example: "Norway"
+        teamName:
+          type: "string"
+          description: "소속팀"
+          example: "Manchester City FC"
+        league:
+          type: "string"
+          description: "소속 리그"
+          example: "Premier League"
+    PlayerResponseArray:
+      type: "array"
+      items:
+        oneOf:
+          - $ref: "#/components/schemas/PlayerResponse"
+          - $ref: "#/components/schemas/PlayerResponse2"
+          - $ref: "#/components/schemas/PlayerResponse3"
+    ApiResponse:
+      type: "object"
+      properties:
+        resultCode:
+          type: "integer"
+          description: "HttpStatus 상세 응답코드"
+          example: "200"
+        resultMessage:
+          type: "object"
+          description: "API 응답 message"
+          example: "success"
+        data:
+          $ref: "#/components/schemas/PlayerResponse"
+    ApiResponseList:
+      type: "object"
+      properties:
+        resultCode:
+          type: "integer"
+          description: "HttpStatus 상세 응답코드"
+          example: "200"
+        resultMessage:
+          type: "object"
+          description: "API 응답 message"
+          example: "success"
+        data:
+          $ref: "#/components/schemas/PlayerResponseArray"

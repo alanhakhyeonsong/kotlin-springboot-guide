@@ -1,0 +1,50 @@
+openapi: "3.0.3"
+info:
+  title: "Guide for Spring Boot with Kotlin API Docs"
+  description: "Ramos의 Open API 3 Test"
+  version: "v1.0.0"
+servers:
+  - url: http://localhost:8080/
+paths:
+  /v1/players/{playerId}:
+    get:
+      tags:
+        - "Player Controller"
+      description: "선수 단건 조회"
+      parameters:
+        - name: "playerId"
+          in: "path"
+          required: true
+          schema:
+            $ref: "/openapi/player-dto.yaml#/components/schemas/PlayerId"
+      responses:
+        "200":
+          $ref: "#/player-common/responses/200-playerResponse"
+        "404":
+          $ref: "/openapi/responses.yaml#/404"
+        "500":
+          $ref: "/openapi/responses.yaml#/500"
+  /v1/players:
+    get:
+      tags:
+        - "Player Controller"
+      description: "선수 전체 조회"
+      responses:
+        "200":
+          $ref: "#/player-common/responses/200-playerResponse-array"
+        "500":
+          $ref: "/openapi/responses.yaml#/500"
+player-common:
+  responses:
+    "200-playerResponse":
+      description: "성공"
+      content:
+        'application/json':
+          schema:
+            $ref: "/openapi/player-dto.yaml#/components/schemas/ApiResponse"
+    "200-playerResponse-array":
+      description: "성공"
+      content:
+        'application/json':
+          schema:
+            $ref: "/openapi/player-dto.yaml#/components/schemas/ApiResponseList"
