@@ -14,6 +14,6 @@ VALUES ('Vini Jr', 7, 'Brazil', 1),
        ('Federico Valverde', 15, 'Uruguay', 1),
        ('Erling Haland', 9, 'Norway', 2),
        ('Kevin De Bruyne', 17, 'Belgium', 2),
-       ('Min-Jae Kim', 3, 'Republic of Korea', 3),
+       ('Min-Jae Kim', 3, 'Republic of Korea', 4),
        ('Harry Kane', 9, 'England', 4),
        ('Heung-Min Son', 7, 'Republic of Korea', 5);
