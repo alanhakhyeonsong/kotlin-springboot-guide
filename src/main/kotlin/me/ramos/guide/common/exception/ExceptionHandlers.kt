@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice
 @RestControllerAdvice
 class ExceptionHandlers {
 
+    // RuntimeException을 상속한 공통 예외인 BaseException에 대한 예외 핸들러
     @ExceptionHandler(BaseException::class)
     fun handleCustomException(e: BaseException): ResponseEntity<ApiResponse<Nothing>> {
         // TODO: log format 정의할 것
