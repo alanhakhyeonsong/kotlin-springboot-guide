@@ -15,4 +15,9 @@ spring:
         dialect: org.hibernate.dialect.MySQLDialect
 springdoc:
   swagger-ui:
-    path: /swagger
+    path: /api-docs
+  api-docs:
+    groups:
+      enabled: true
+  cache:
+    disabled: true
