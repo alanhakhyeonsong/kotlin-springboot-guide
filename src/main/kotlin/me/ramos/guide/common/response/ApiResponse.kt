@@ -9,7 +9,7 @@ package me.ramos.guide.common.response
  * @property data
  * @constructor Create empty Common response
  */
-data class CommonResponse<T>(
+data class ApiResponse<T>(
     val returnCode: Int,
     val returnMessage: String,
     val data: T? = null) {
