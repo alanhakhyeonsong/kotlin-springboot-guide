@@ -16,9 +16,9 @@ class PlayerController(
     private val playerService: PlayerService
 ) {
 
-    @GetMapping("/{id}")
-    fun retrievePlayer(@PathVariable id: Long): ResponseEntity<ApiResponse<PlayerResponse>> {
-        val result = playerService.findByPlayerId(id)
+    @GetMapping("/{playerId}")
+    fun retrievePlayer(@PathVariable playerId: Long): ResponseEntity<ApiResponse<PlayerResponse>> {
+        val result = playerService.findByPlayerId(playerId)
         return ResponseEntity.ok()
             .body(ApiResponse(CodeEnum.OK.code, CodeEnum.OK.message, result))
     }
