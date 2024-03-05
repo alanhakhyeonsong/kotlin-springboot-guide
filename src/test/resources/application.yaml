@@ -1,8 +1,6 @@
 spring:
   datasource:
     url: jdbc:tc:mysql:8.0.19//guide
-    username: 'user'
-    password: ''
     driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
   jpa:
     hibernate:
