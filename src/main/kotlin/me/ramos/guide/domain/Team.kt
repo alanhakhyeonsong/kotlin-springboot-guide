@@ -13,7 +13,7 @@ class Team(
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long = 0
+    val id: Long? = null
 
     @OneToMany(mappedBy = "team")
     val players: MutableList<Player> = mutableListOf()
