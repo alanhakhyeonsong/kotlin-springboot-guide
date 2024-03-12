@@ -56,6 +56,8 @@ dependencies {
     testImplementation("org.testcontainers:junit-jupiter")
     // Open API 3
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0")
+
+    implementation("com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.9.1")
 }
 
 tasks.withType<KotlinCompile> {
